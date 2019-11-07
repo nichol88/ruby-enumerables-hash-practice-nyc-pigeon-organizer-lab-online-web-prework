@@ -1,14 +1,7 @@
 def nyc_pigeon_organizer(data)
-  # write your code here!
-  #puts "Input data:"
-  #puts pp(data)
-  # HoHoA
   pigeon_list = {}
 
-
   data.each { |hash_title, attributes|
-    puts "Titles: #{hash_title}, attributes: #{attributes}"
-
     attributes.each { |attribute, names|
       names.each { |name|
         if !pigeon_list[name]
@@ -18,12 +11,7 @@ def nyc_pigeon_organizer(data)
       }
     }
   }
-
-
-
-
   pigeon_list
-
 end
 
 def add_pigeon(name)
