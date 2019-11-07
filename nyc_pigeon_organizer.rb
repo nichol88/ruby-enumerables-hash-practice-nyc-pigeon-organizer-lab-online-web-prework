@@ -5,9 +5,6 @@ def nyc_pigeon_organizer(data)
   # HoHoA
   pigeon_list = {}
 
-  colors = data[:color]
-  genders = data[:gender]
-  lives = data[:lives]
 
   data.each { |hash_title, attributes|
     puts "Titles: #{hash_title}, attributes: #{attributes}"
@@ -23,7 +20,27 @@ def nyc_pigeon_organizer(data)
   }
 
 
+
+
+  pigeon_list
+
+end
+
+def add_pigeon(name)
+  {
+    :color => [],
+    :gender => [],
+    :lives => []
+  }
+end
+
+
 =begin
+
+colors = data[:color]
+genders = data[:gender]
+lives = data[:lives]
+
 
   colors.each { |color, names|
     names.each { |name|
@@ -53,16 +70,3 @@ def nyc_pigeon_organizer(data)
   }
 
 =end
-
-  pigeon_list
-
-end
-
-def add_pigeon(name)
-  result = {
-    :color => [],
-    :gender => [],
-    :lives => []
-  }
-  return result
-end
